@@ -1,0 +1,44 @@
+input {
+  width: 524px;
+  padding: 0 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid lavender;
+  text-align: center;
+  font-size: 1.8rem;
+  color: lavender;
+}
+
+input:hover,
+input:focus,
+input:focus-within,
+input:active {
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100px;
+  font-size: 1.5rem;
+  border: none;
+}
+
+input::placeholder {
+  color: var(--c, lavneder);
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+ul {
+  width: 100%;
+  padding: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}

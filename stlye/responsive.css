@@ -1,0 +1,13 @@
+.hidden {
+  display: none;
+}
+
+.dark-input {
+  border-bottom: 1px solid var(--black);
+  color: var(--black);
+}
+
+.dark-button {
+  color: var(--black);
+  border: none;
+}

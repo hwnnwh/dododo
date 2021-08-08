@@ -1,0 +1,23 @@
+@import "reset.css";
+@import "form.css";
+@import "responsive.css";
+@import "tail.css";
+@import "header.css";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.main {
+  text-align: center;
+}
+
+:root {
+  --black: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,18 @@
+header {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  font-size: 1.2rem;
+}
+
+#changeBgBtn {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 100px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: lavender;
+}
