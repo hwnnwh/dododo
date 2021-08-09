@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,8 +19,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      WEATHER_API_KEY: ${{secrets.WEATHER_API_KEY}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,3 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Calling a weather API
+        run: |
+          curl --request GET \
+          --url https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${{secrets.WEATHER_API_KEY}}&units=metric&lang=kr \
+        env:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+
+      - name: Start Dododo
+        use: hwnnwh/dododo/@v1.0.0
+        with:
+          WEATEHR_API_KEY: ${{secrets.WEATHER_API_KEY}}
