@@ -34,16 +34,16 @@ function onLoginSubmit(e) {
 
 function paintGreeting(username) {
   switch (true) {
-    case 11 >= timeNow || timeNow >= 6:
+    case 11 >= timeNow && timeNow >= 6:
       greeting.innerText = `Good Morning ${username}!`;
       break;
-    case 15 >= timeNow || timeNow >= 12:
+    case 15 >= timeNow && timeNow >= 12:
       greeting.innerText = `Good afternoon ${username}!`;
       break;
-    case 20 >= timeNow || tinmeNow >= 16:
+    case 20 >= timeNow && timeNow >= 16:
       greeting.innerText = `Good Evening ${username}!`;
       break;
-    case 24 >= timeNow || timeNow >= 21 || 3 >= timeNow || timeNow >= 0:
+    case (24 >= timeNow && timeNow >= 21) || (3 >= timeNow && timeNow >= 0):
       greeting.innerText = `Good Night ${username}!`;
       break;
     default:
